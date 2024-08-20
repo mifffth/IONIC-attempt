@@ -1,0 +1,7 @@
+{
+  "name": "side-ichi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
