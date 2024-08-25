@@ -117,3 +117,12 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+.id {
+  font-weight: bold;
+  padding: 10px; /* Optional: Makes the name bold */
+}
+
+.id-number {
+  display: block;
+}

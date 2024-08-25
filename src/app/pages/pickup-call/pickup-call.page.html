@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button text="">
+
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Pickup call</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img src="https://ionicframework.com/docs/img/demos/card-media.png">
+  <ion-card>
+    <ion-card-content>
+    <p>adress: fake street</p>
+    <p>complement: -</p>
+    <p>zip code: 13</p>
+    <p>city: -</p>
+  </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item lines="insert">
+      <ion-label position="floating">notes</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-button size="full" color="secondary" (click)="newPickupCall()">Create a pickup call</ion-button>
+</ion-content>

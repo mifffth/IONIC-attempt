@@ -1,0 +1,72 @@
+<ion-content>
+  <div class="flex-center">
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <ion-card>
+        <img alt="Recycle" src="assets/recycle.jpg" />
+        <ion-card-header>
+          <ion-card-title color="success" class="center-text title"
+            >Recycle</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <!-- Input for Email -->
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input
+              id="email"
+              type="email"
+              formControlName="email"
+            ></ion-input>
+          </ion-item>
+
+          <!-- Error Messages for Email -->
+          <app-error-message
+            [field]="form.get('email')"
+            error="required"
+            message="Email is mandatory!"
+          ></app-error-message>
+          <app-error-message
+            [field]="form.get('email')"
+            error="email"
+            message="Invalid email!"
+          ></app-error-message>
+
+          <!-- Input for Password -->
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input
+              id="password"
+              type="password"
+              formControlName="password"
+            ></ion-input>
+          </ion-item>
+          <app-error-message
+            [field]="form.get('password')"
+            error="required"
+            message="Password is mandatory!"
+          ></app-error-message>
+
+          <!-- Login Button -->
+          <ion-button expand="full" type="submit" [disabled]="!form.valid"
+            >Login</ion-button
+          >
+
+          <!-- Forgot Button -->
+          <ion-button
+            color="dark"
+            fill="clear"
+            expand="full"
+            type="button"
+            [disabled]="!form.get('email')?.valid"
+          >
+            <a href="/forget-page">Forgot email/password?</a>
+          </ion-button>
+
+          <ion-text>
+            <p class="center-text register">Don't have an account? <a href="/register">Sign Up</a></p>
+          </ion-text>
+        </ion-card-content>
+      </ion-card>
+    </form>
+  </div>
+</ion-content>

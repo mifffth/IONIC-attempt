@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-card-header>
+      Recycle
+    </ion-card-header>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list color="secondary">
+    <ion-item color="secondary">
+      <ion-avatar slot="start">
+        <img
+          src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+        />
+      </ion-avatar>
+      <ion-label>
+        <h1>Miftah</h1>
+        <p>Gathered: <span class="money">15k rp</span></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <app-pickup-call-card status="hold" updatedAt="24/08/2024 16:05:00" createdAt="10/08/2024 16:05:00" 
+  notes="We have 2 bag, one is full and other is half full">
+    <ion-card-header header>
+      Last pickup call
+    </ion-card-header>  
+    <ion-button color="success" fill="clear" size="full" footer (click)="goToPickupCalls()">See all...</ion-button>
+  </app-pickup-call-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="newPickupCall()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
