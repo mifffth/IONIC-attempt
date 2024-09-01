@@ -4,8 +4,9 @@
       <ion-card>
         <img alt="Recycle" src="assets/recycle.jpg" />
         <ion-card-header>
-          <ion-card-title color="success" class="center-text title"
-            >Recycle</ion-card-title>
+          <ion-card-title color="success" class="center-text title">
+            Recycle
+          </ion-card-title>
         </ion-card-header>
 
         <ion-card-content>
@@ -47,9 +48,9 @@
           ></app-error-message>
 
           <!-- Login Button -->
-          <ion-button expand="full" type="submit" [disabled]="!form.valid"
-            >Login</ion-button
-          >
+          <ion-button expand="full" type="submit" [disabled]="!form.valid" id="loginButton">
+            Login
+          </ion-button>
 
           <!-- Forgot Button -->
           <ion-button
@@ -58,12 +59,16 @@
             expand="full"
             type="button"
             [disabled]="!form.get('email')?.valid"
+            (click)="forgotEmailPassword()"
+            id="recoverPasswordButton"
           >
-            <a href="/forget-page">Forgot email/password?</a>
+            Forgot email/password?
           </ion-button>
 
           <ion-text>
-            <p class="center-text register">Don't have an account? <a href="/register">Sign Up</a></p>
+            <p class="center-text register">
+              Don't have an account? <a href="/register">Sign Up</a>
+            </p>
           </ion-text>
         </ion-card-content>
       </ion-card>

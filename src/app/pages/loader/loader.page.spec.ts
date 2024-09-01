@@ -3,6 +3,7 @@ import { Router } from '@angular/router'; // Import Router
 import { LoaderPage } from './loader.page';
 import { IonicModule } from '@ionic/angular';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { tick } from '@angular/core/testing';
 
 describe('LoaderPage', () => {
   let component: LoaderPage;
