@@ -11,6 +11,7 @@ import { initializeApp } from "firebase/app";
 import { environment } from 'src/environments/environment.prod';
 import { AngularFireModule } from '@angular/fire/compat';
 
+
 @NgModule({
   declarations: [
     AppComponent,

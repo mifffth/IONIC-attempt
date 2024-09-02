@@ -77,7 +77,7 @@ describe('LoginEffects', () => {
     });
   });
 
-  it('should login with invalid credentials return fail', (done) => {
+  it('should not login with invalid credentials return fail', (done) => {
     actions$ = of(login({ email: 'error@email.com', password: 'anyPassword' }));
 
     effects.login$.subscribe((newAction) => {
