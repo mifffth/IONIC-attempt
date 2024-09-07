@@ -1,9 +1,11 @@
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterPage } from './register.page';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Router } from '@angular/router'; // Import Router
 import { IonicModule } from '@ionic/angular';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { RegisterPageModule } from './register.module';
 
 describe('LoginPage', () => {
   let component: RegisterPage;
@@ -15,7 +17,9 @@ describe('LoginPage', () => {
       declarations: [ RegisterPage ],
       imports: [
         IonicModule.forRoot(),
-        AppRoutingModule // Added comma
+        AppRoutingModule,
+        ReactiveFormsModule,
+        RegisterPageModule
       ]
     }).compileComponents();
 
@@ -30,10 +34,20 @@ describe('LoginPage', () => {
     expect(router.navigate).toHaveBeenCalledWith(['home']); // Use lowercase 'login'
   });
 
+  it('should create register form on page initialization', () => {
+    fixture.detectChanges();
+    expect(component.registerForm).not.toBeUndefined();
+  
+});
+
   it('should go to register', () => {
     spyOn(router, 'navigate'); // Spy on the navigate method
     component.register();
     expect(router.navigate).toHaveBeenCalledWith(['home']); // Use lowercase 'login'
   });
+
+  
+
+
 });
 
