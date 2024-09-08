@@ -8,7 +8,7 @@ import { hide, show } from 'src/store/loading/loading.actions';
 import { login, recoverPassword, recoverPasswordFail, recoverPasswordSuccess, loginSuccess, loginFail } from 'src/store/login/login.actions';
 import { Subscription } from 'rxjs';
 import { LoginState } from 'src/store/login/LoginState';
-import { ToastController } from '@ionic/angular';
+import { NavController, ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
@@ -25,8 +25,8 @@ export class LoginPage implements OnInit, OnDestroy {
     private formBuilder: FormBuilder,
     private store: Store<AppState>,
     private toastController: ToastController,
-    private authService: AuthService
-  ) {}
+    private authService: AuthService,
+    private navController: NavController) {}
 
   ngOnInit() {
     this.form = new LoginPageForm(this.formBuilder).createForm();
@@ -58,7 +58,7 @@ export class LoginPage implements OnInit, OnDestroy {
 
   private onIsLoggedIn(loginState: LoginState) {
     if (loginState.isLoggedIn) {
-      this.router.navigate(['home']);
+      this.navController.navigateRoot('home');
     }
   }
 

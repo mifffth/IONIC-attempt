@@ -14,20 +14,6 @@
         <ion-card-title>Welcome, please fill out your data</ion-card-title>
       </ion-item>
     </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-radio-group>
-          <ion-item>
-            <ion-label>I wanna buy</ion-label>
-            <ion-radio value="customer" justify="end"></ion-radio>
-          </ion-item>
-          <ion-item>
-            <ion-label>I wanna sell</ion-label>
-            <ion-radio value="client" justify="end"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </ion-list>
-    </ion-card-content>
   </ion-card>
 
   <form [formGroup]="registerForm.getForm()">
@@ -45,7 +31,7 @@
           error="required"
           message="Name is mandatory!"
         ></app-error-message>
-        
+
         <ion-item>
           <ion-label position="floating">Email</ion-label>
           <ion-input type="email" formControlName="email" required></ion-input>
@@ -60,10 +46,14 @@
           error="email"
           message="Email is invalid!"
         ></app-error-message>
-        
+
         <ion-item>
           <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" formControlName="password" required></ion-input>
+          <ion-input
+            type="password"
+            formControlName="password"
+            required
+          ></ion-input>
         </ion-item>
         <app-error-message
           [field]="registerForm.getForm().get('password')"
@@ -75,17 +65,21 @@
           error="minlength"
           message="Minimum password has to be 6!"
         ></app-error-message>
-        
+
         <ion-item>
           <ion-label position="floating">Confirm password</ion-label>
-          <ion-input type="password" formControlName="repeatPassword" required></ion-input>
+          <ion-input
+            type="password"
+            formControlName="repeatPassword"
+            required
+          ></ion-input>
         </ion-item>
         <app-error-message
           [field]="registerForm.getForm().get('repeatPassword')"
           error="isntMatching"
           message="Password has to be same!"
         ></app-error-message>
-        
+
         <ion-item>
           <ion-label position="floating">Phone number</ion-label>
           <ion-input type="tel" formControlName="phone" required></ion-input>
@@ -108,40 +102,78 @@
           <ion-input type="text" formControlName="street" required></ion-input>
         </ion-item>
         <app-error-message
-  [field]="registerForm?.getForm()?.get('address')?.get('street') ?? null"
-  error="required"
-  message="Street is mandatory!"
-></app-error-message>
-        
+          [field]="registerForm?.getForm()?.get('address')?.get('street') ?? null"
+          error="required"
+          message="Street is mandatory!"
+        ></app-error-message>
+
         <ion-item>
           <ion-label position="floating">Number</ion-label>
           <ion-input type="tel" formControlName="number" required></ion-input>
         </ion-item>
         <app-error-message
-  [field]="registerForm?.getForm()?.get('address')?.get('number') ?? null"
-  error="required"
-  message="Number is mandatory!"
-></app-error-message>
-        
+          [field]="registerForm?.getForm()?.get('address')?.get('number') ?? null"
+          error="required"
+          message="Number is mandatory!"
+        ></app-error-message>
+
         <ion-item>
           <ion-label position="floating">Neighborhood</ion-label>
-          <ion-input type="text" formControlName="neighborhood" required></ion-input>
+          <ion-input
+            type="text"
+            formControlName="neighborhood"
+            required
+          ></ion-input>
         </ion-item>
         <app-error-message
-  [field]="registerForm?.getForm()?.get('address')?.get('neighborhood') ?? null"
-  error="required"
-  message="Neighborhood is mandatory!"
-></app-error-message>
-        
+          [field]="registerForm?.getForm()?.get('address')?.get('neighborhood') ?? null"
+          error="required"
+          message="Neighborhood is mandatory!"
+        ></app-error-message>
+
+        <ion-item>
+          <ion-label position="floating">City</ion-label>
+          <ion-input type="text" formControlName="city" required></ion-input>
+        </ion-item>
+        <app-error-message
+          [field]="registerForm?.getForm()?.get('address')?.get('city') ?? null"
+          error="required"
+          message="City is mandatory!"
+        ></app-error-message>
+
+        <ion-item>
+          <ion-label position="floating">State</ion-label>
+          <ion-input type="text" formControlName="state" required></ion-input>
+        </ion-item>
+        <app-error-message
+          [field]="registerForm?.getForm()?.get('address')?.get('state') ?? null"
+          error="required"
+          message="State is mandatory!"
+        ></app-error-message>
+
+        <ion-item>
+          <ion-label position="floating">Zipcode</ion-label>
+          <ion-input type="text" formControlName="zipcode" required></ion-input>
+        </ion-item>
+        <app-error-message
+          [field]="registerForm?.getForm()?.get('address')?.get('zipcode') ?? null"
+          error="required"
+          message="Zipcode is mandatory!"
+        ></app-error-message>
+
         <ion-item>
           <ion-label position="floating">Complement</ion-label>
-          <ion-input type="text" formControlName="complement" required></ion-input>
+          <ion-input
+            type="text"
+            formControlName="complement"
+            required
+          ></ion-input>
         </ion-item>
         <app-error-message
-  [field]="registerForm?.getForm()?.get('address')?.get('complement') ?? null"
-  error="required"
-  message="Complement is mandatory!"
-></app-error-message>
+          [field]="registerForm?.getForm()?.get('address')?.get('complement') ?? null"
+          error="required"
+          message="Complement is mandatory!"
+        ></app-error-message>
       </ion-card-content>
     </ion-card>
 
