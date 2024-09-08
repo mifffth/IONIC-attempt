@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RegisterPageForm } from './form/register.page.form';
-import { FormBuilder} from "@angular/forms";
+import { FormBuilder, FormGroup, ValidatorFn, Validators } from "@angular/forms";
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/store/AppState';
 import { register } from 'src/store/register/register.actions';
@@ -67,17 +67,13 @@ export class RegisterPage implements OnInit, OnDestroy {
   }
   private onError(state: RegisterState) {
     if (state.error){
-      console.log('Error:', state.error.message); // Debugging line
       this.toastController.create({
         message: state.error.message,
         duration: 5000,
-        header: 'Registration invalid'
-      }).then(toast => {
-        console.log('Presenting toast'); // Debugging line
-        toast.present();
-      }).catch(err => console.log('Toast error:', err)); // Catch any error
+        header: 'Registration not done'
+      }).then(toast => toast.present());
     }
-  }  
+  }
 
   private toggleLoading(state: RegisterState){
     if (state.isRegistering) {

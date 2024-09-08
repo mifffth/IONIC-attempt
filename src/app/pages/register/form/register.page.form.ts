@@ -21,7 +21,7 @@ export class RegisterPageForm {
                 number: ['', [Validators.required]],
                 neighborhood: ['', [Validators.required]],
                 complement: ['', [Validators.required]],
-                zipcode: ['', [Validators.required]],
+                zipCode: ['', [Validators.required]],
                 state: ['', [Validators.required]],
                 city: ['', [Validators.required]]
             })

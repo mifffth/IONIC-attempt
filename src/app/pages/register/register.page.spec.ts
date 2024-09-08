@@ -134,12 +134,13 @@ describe('RegisterPage', () => {
     component.registerForm.getForm().get('password')?.setValue('anyPassword');
     component.registerForm.getForm().get('phone')?.setValue('anyPhone');
     component.registerForm.getForm().get('repeatPassword')?.setValue('anyPassword');
-    component.registerForm.getForm().get('address')?.get('street')?.setValue('anyStreet');
-    component.registerForm.getForm().get('address')?.get('number')?.setValue('anyNumber');
-    component.registerForm.getForm().get('address')?.get('complement')?.setValue('anyComplement');
-    component.registerForm.getForm().get('address')?.get('neigborhood')?.setValue('anyNeigborhood');
-    component.registerForm.getForm().get('address')?.get('zipcode')?.setValue('anyZipcode');
-    component.registerForm.getForm().get('address')?.get('state')?.setValue('anyState');
-    component.registerForm.getForm().get('address')?.get('city')?.setValue('anyCity');
+    component.registerForm.getForm().get('address')?.get('street')?.setValue('any street');
+    component.registerForm.getForm().get('address')?.get('number')?.setValue('any number');
+    component.registerForm.getForm().get('address')?.get('complement')?.setValue('any complement');
+    component.registerForm.getForm().get('address')?.get('neigborhood')?.setValue('any neigborhood');
+    component.registerForm.getForm().get('address')?.get('zipCode')?.setValue('any zip code');
+    component.registerForm.getForm().get('address')?.get('state')?.setValue('any state');
+    component.registerForm.getForm().get('address')?.get('city')?.setValue('any city');
   }
 });
+

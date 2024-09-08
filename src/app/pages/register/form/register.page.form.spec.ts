@@ -78,7 +78,7 @@ describe('RegisterPageForm', () => {
         form.get('address')?.get('number')?.setValue('any number');
         form.get('address')?.get('complement')?.setValue('any complement');
         form.get('address')?.get('neigborhood')?.setValue('any neigborhood');
-        form.get('address')?.get('zipcode')?.setValue('any zip code');
+        form.get('address')?.get('zipCode')?.setValue('any zip code');
         form.get('address')?.get('state')?.setValue('any state');
         form.get('address')?.get('city')?.setValue('any city');
         expect(form.valid).toBeTruthy();

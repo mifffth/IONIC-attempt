@@ -1,4 +1,5 @@
 import { UserRegister } from "src/app/model/user/UserRegister";
+import { Address } from "src/app/model/address/Address"; // Make sure to import Address
 import { AppInitialState } from "../AppInitialState";
 import { registerReducer } from "./register.reducers";
 import { register, registerFail, registerSuccess } from "./register.actions";
