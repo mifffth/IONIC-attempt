@@ -85,7 +85,7 @@ describe('RegisterPage', () => {
     store.dispatch(register({ userRegister: new UserRegister() }));
     store.dispatch(registerSuccess());
 
-    store.select('loading').subscribe(state => {
+    store.select("loading").subscribe(state => {
       expect(state.show).toBeFalsy();
     });
   });
